@@ -40,6 +40,9 @@ public class BookController {
         return ResponseEntity.status(200).body(new ApiResponse("the Book is deleted"));
     }
 
-    
+    public ResponseEntity GetBooksByCategory(@PathVariable String category)
+    {
+       return ResponseEntity.status(200).body(bookService.GetBooksByCategory(category));
+    }
 
 }
